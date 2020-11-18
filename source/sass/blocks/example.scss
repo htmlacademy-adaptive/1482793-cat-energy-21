@@ -1,0 +1,42 @@
+.example {
+  padding-top: 27px;
+  padding-bottom: 25px;
+  background-color: $lighter_grey;
+}
+
+.example__wrapper {
+  @include container;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-size: 36px;
+  font-weight: inherit;
+  line-height: 40px;
+  color: $black;
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: $arial;
+}
+
+.example__item-number {
+  font-size: 24px;
+  line-height: 24px;
+  color: $black;
+}
+
+.example__item-description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__price {
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black;
+}

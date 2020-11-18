@@ -1,0 +1,32 @@
+.main-nav__list {
+  @include list-reset;
+  text-align: center;
+}
+
+.main-nav__item {
+  padding-top: 22px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-top: 1px solid $silver_grey;
+}
+
+.main-nav__item-link {
+  color: $black;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    pointer-events: none;
+    border-bottom: 2px solid $basic_green;
+  }
+}

@@ -1,0 +1,17 @@
+.social__list {
+  @include list-reset;
+}
+
+.social__item-link {
+  color: $special_grey-3;
+
+  &:hover,
+  &:focus {
+    color: $basic_green;
+  }
+
+  &:active {
+    color: $basic_green;
+    opacity: 0.3;
+  }
+}
