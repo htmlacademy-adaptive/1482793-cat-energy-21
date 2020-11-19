@@ -1,0 +1,25 @@
+.copyright__text {
+  font-size: 16px;
+  font-family: $arial;
+  color: $special_dark-grey;
+}
+
+.copyright__image path {
+  fill: $special_grey-3;
+}
+
+.copyright__link {
+  &:hover,
+  &:focus {
+    .copyright__image path {
+      fill: $basic_green;
+    }
+  }
+
+  &:active {
+    .copyright__image path {
+      fill: $basic_green;
+    }
+    opacity: 0.3;
+  }
+}

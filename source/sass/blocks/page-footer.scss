@@ -2,38 +2,7 @@
   background-color: $basic_grey;
 }
 
-.page-footer__wrapper {
-  @include container;
-}
-
 .page-footer__map {
   width: 100%;
   margin: 0 auto;
-}
-
-.copyright__text {
-  font-size: 16px;
-  font-family: $arial;
-  line-height: 16px;
-  color: $special_dark-grey;
-}
-
-.copyright__image path {
-  fill: $special_grey-3;
-}
-
-.copyright__link {
-  &:hover,
-  &:focus {
-    .copyright__image path {
-      fill: $basic_green;
-    }
-  }
-
-  &:active {
-    .copyright__image path {
-      fill: $basic_green;
-    }
-    opacity: 0.3;
-  }
 }

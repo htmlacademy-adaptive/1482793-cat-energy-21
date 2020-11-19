@@ -4,10 +4,6 @@
   background-color: $lighter_grey;
 }
 
-.example__wrapper {
-  @include container;
-}
-
 .example__title {
   margin: 0;
   margin-bottom: 33px;
@@ -33,6 +29,7 @@
   margin: 0;
   font-size: 12px;
   line-height: 12px;
+  font-family: $arial;
 }
 
 .example__price {
