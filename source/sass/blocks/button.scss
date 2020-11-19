@@ -1,0 +1,17 @@
+.button {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $basic_green;
+
+  &:hover,
+  &:focus {
+    background-color: $basic_green-2;
+  }
+
+  &:active {
+    color: $transparent_white;
+  }
+}

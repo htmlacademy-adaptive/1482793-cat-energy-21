@@ -1,0 +1,36 @@
+.programs__item {
+  margin-bottom: 20px;
+  padding: 30px 33px 18px 20px;
+  background-color: $basic_grey;
+}
+
+.programs__item-title {
+  margin: 0;
+  margin-bottom: 29px;
+  padding-left: 71px;
+  font-size: 24px;
+  font-weight: inherit;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.programs__item-text {
+  margin: 0;
+  margin-bottom: 23px;
+  font-family: $arial;
+}
+
+.programs__item-link {
+  display: block;
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $black;
+  border-top: 1px solid $light_grey;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

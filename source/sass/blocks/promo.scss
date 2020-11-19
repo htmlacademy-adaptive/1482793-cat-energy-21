@@ -1,0 +1,31 @@
+.promo {
+  padding-bottom: 22px;
+  text-align: center;
+  color: $white;
+}
+
+.promo__description {
+  padding-top: 27px;
+  background-color: $basic_green;
+}
+
+.promo__description-title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: inherit;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__description-text {
+  margin: 0;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__link-button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 14px;
+  line-height: 18px;
+}
