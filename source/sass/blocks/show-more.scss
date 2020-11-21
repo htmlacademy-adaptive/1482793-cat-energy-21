@@ -1,0 +1,34 @@
+.show-more__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $black_grey;
+  text-align: center;
+}
+
+.show-more__description {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $arial;
+  text-align: center;
+}
+
+.show-more__link {
+  width: 100%;
+  color: $special_dark-grey;
+  background-color: $basic_grey;
+
+  &:hover,
+  &:focus {
+    background-color: $special_grey-2;
+  }
+
+  &:active {
+    color: $transparent-grey;
+  }
+}

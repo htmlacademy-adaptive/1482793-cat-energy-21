@@ -1,0 +1,51 @@
+.additions__title {
+  margin: 0;
+  margin-bottom: 48px;
+  font-size: 24px;
+  font-weight: inherit;
+  line-height: 24px;
+  color: $black;
+}
+
+.additions__list {
+  @include list-reset;
+}
+
+.additions__name {
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  font-weight: inherit;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.additions__link {
+  color: $special_dark-grey-2;
+}
+
+.additions__table {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $arial;
+}
+
+.additions__button {
+  width: 100%;
+  margin-bottom: 31px;
+}
+
+.additions__promo-wrap {
+  background-color: $basic_green;
+}
+
+.additions__promo {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $arial;
+  color: $white;
+  text-align: center;
+}
