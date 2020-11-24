@@ -1,7 +1,27 @@
+.programs__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .programs__item {
   margin-bottom: 20px;
   padding: 30px 33px 18px 20px;
   background-color: $basic_grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 48px 279px 53px 52px;
+
+    &--pro {
+      padding-right: 314px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 52px 55px;
+  }
 }
 
 .programs__item-title {
@@ -13,6 +33,10 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .programs__item-text {

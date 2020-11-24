@@ -2,17 +2,60 @@
   padding-bottom: 22px;
   text-align: center;
   color: $white;
+  background-color: $basic_green;
+  background-image: linear-gradient(to top, $white 175px, transparent 175px);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  @media (min-width: $tablet-width) {
+    min-height: 810px;
+    color: $black;
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic_green;
+    background-image: linear-gradient(to right, $white 720px, transparent 720px);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+}
+
+.promo__wrapper {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-left: 87px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 223px;
+    padding-left: 80px;
+  }
 }
 
 .promo__description {
+  position: relative;
   padding-top: 27px;
-  background-color: $basic_green;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+  }
 }
 
 .promo__description-title {
   margin: 0;
   margin-bottom: 25px;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 41px;
+    color: $black;
+  }
 }
 
 .promo__description-text {
@@ -22,6 +65,31 @@
 }
 
 .promo__link-button {
+  width: 100%;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+  }
+}
+
+.promo__image {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: -526px;
+    left: 50%;
+    width: 709px;
+    height: 609px;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -200px;
+    left: 650px;
+    width: 552px;
+    height: 499px;
+    z-index: 0;
+  }
 }

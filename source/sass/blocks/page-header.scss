@@ -1,0 +1,27 @@
+.page-header--main {
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
+  padding-top: 11px;
+  border-bottom: 1px solid $silver_grey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  flex-direction: row;
+}

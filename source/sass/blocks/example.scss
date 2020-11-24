@@ -4,6 +4,28 @@
   background-color: $lighter_grey;
 }
 
+.example__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-areas:
+      "example-title example-title"
+      "example-text example-text"
+      "example-list example-price"
+      "example-toggle example-toggle";
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas:
+      "example-title example-toggle"
+      "example-text example-toggle"
+      "example-list example-toggle"
+      "example-price example-toggle";
+    grid-template-columns: 436px 1fr;
+  }
+}
+
 .example__title {
   margin: 0;
   margin-bottom: 33px;
@@ -11,12 +33,32 @@
   font-weight: inherit;
   line-height: 40px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    grid-area: example-title;
+  }
 }
 
 .example__text {
   margin: 0;
   margin-bottom: 25px;
   font-family: $arial;
+
+  @media (min-width: $tablet-width) {
+    grid-area: example-text;
+  }
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-area: example-list;
+    width: 366px;
+  }
 }
 
 .example__item-number {
@@ -35,5 +77,30 @@
 .example__price {
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    grid-area: example-price;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    width: 327px;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.example__toggle {
+  @media (min-width: $tablet-width) {
+    grid-area: example-toggle;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: right;
+  }
 }
