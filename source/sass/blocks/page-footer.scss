@@ -2,12 +2,23 @@
   background-color: $basic_grey;
 }
 
-.page-footer__map {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+.page-footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.page-footer__contacts {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .page-footer__logo {
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: left;
+  }
 }

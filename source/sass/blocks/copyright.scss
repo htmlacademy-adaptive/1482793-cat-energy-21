@@ -1,3 +1,9 @@
+.copyright {
+  @media (min-width: $tablet-width) {
+    justify-self: right;
+  }
+}
+
 .copyright__text {
   font-size: 16px;
   font-family: $arial;
@@ -9,6 +15,9 @@
 }
 
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+
   &:hover,
   &:focus {
     .copyright__image path {
@@ -21,5 +30,10 @@
       fill: $basic_green;
     }
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+    text-align: right;
   }
 }
