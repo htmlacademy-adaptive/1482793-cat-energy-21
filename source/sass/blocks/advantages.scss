@@ -14,13 +14,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 58px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 79px;
+    justify-content: space-between;
   }
 }
 
