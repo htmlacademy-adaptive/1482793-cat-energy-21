@@ -1,3 +1,18 @@
+.show-more {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 161px 36px 40px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 243px 30px 40px 35px;
+  }
+}
+
 .show-more__title {
   margin: 0;
   margin-bottom: 8px;
