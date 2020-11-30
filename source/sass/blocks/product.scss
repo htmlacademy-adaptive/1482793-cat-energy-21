@@ -1,3 +1,21 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 36px 40px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 30px 40px 35px;
+  }
+}
+
 .product__name {
   margin: 0;
   font-weight: inherit;
@@ -11,11 +29,18 @@
 }
 
 .product__table {
+  width: 100%;
   font-size: 12px;
   line-height: 16px;
   font-family: $arial;
 }
 
+.product__feature {
+  display: flex;
+  justify-content: space-between;
+}
+
 .product__button {
+  grid-column: 1 / -1;
   width: 100%;
 }
