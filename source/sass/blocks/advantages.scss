@@ -1,33 +1,119 @@
 .advantages__title {
+  margin: 0;
+  margin-bottom: 40px;
+  padding-top: 7px;
   font-size: 36px;
   font-weight: inherit;
   line-height: 40px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 42px;
+  }
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
+  @include list-reset;
+  margin-bottom: 46px;
   font-family: $arial;
-  list-style: none;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 324px 324px;
     justify-content: space-between;
+    margin-bottom: 1px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 247px);
     justify-content: space-between;
   }
 }
 
 .advantages__item {
+  position: relative;
   padding-left: 80px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
+    margin-bottom: 37px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $basic_green;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.advantages__item-text {
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    padding-top: 128px;
+    padding-bottom: 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: -9px;
+      left: 114px;
+      z-index: -1;
+      font-size: 282px;
+      line-height: 282px;
+      font-family: $oswald;
+      color: $basic_grey;
+    }
+  }
+}
+
+.advantages__item:nth-child(1) .advantages__item-text {
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "1";
+    }
+  }
+}
+
+.advantages__item:nth-child(2) .advantages__item-text {
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "2";
+    }
+  }
+}
+
+.advantages__item:nth-child(3) .advantages__item-text {
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "3";
+    }
+  }
+}
+
+.advantages__item:nth-child(4) .advantages__item-text {
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "4";
+    }
   }
 }

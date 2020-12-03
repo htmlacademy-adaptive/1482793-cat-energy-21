@@ -7,12 +7,14 @@
 }
 
 .programs__item {
+  position: relative;
   margin-bottom: 20px;
   padding: 30px 33px 18px 20px;
   background-color: $basic_grey;
 
   @media (min-width: $tablet-width) {
-    padding: 48px 279px 53px 52px;
+    margin-bottom: 30px;
+    padding: 77px 279px 56px 52px;
 
     &--pro {
       padding-right: 314px;
@@ -21,7 +23,32 @@
 
   @media (min-width: $desktop-width) {
     width: 570px;
-    padding: 77px 52px 55px;
+    padding: 77px 52px 57px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    background-color: $basic_green;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: 92px;
+      left: 446px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 48px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -36,7 +63,15 @@
   color: $black;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
     padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 74px;
   }
 }
 
@@ -44,18 +79,89 @@
   margin: 0;
   margin-bottom: 23px;
   font-family: $arial;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
 }
 
 .programs__item-link {
-  display: block;
-  padding-top: 15px;
+  position: relative;
+  display: inline-block;
+  padding-top: 17px;
+  padding-bottom: 5px;
+  padding-right: 57px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $black;
   border-top: 1px solid $light_grey;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+  }
+
   &:active {
     opacity: 0.3;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    top: 25px;
+    right: 25px;
+    width: 18px;
+    height: 2px;
+    background-color: $black;
+
+    @media (min-width: $tablet-width) {
+      right: 14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 12px;
+    }
+  }
+
+  &::after {
+    top: 21px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-right: none;
+    border-left: 7px solid $black;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      right: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 5px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform: scaleX(1.5) translateX(3px);
+    }
+
+    &::after {
+      transform: translateX(8px);
+    }
   }
 }

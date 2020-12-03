@@ -6,6 +6,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 31px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 33px;
+    padding-bottom: 29px;
   }
 }
 
@@ -16,9 +23,14 @@
 }
 
 .page-footer__logo {
+  padding-top: 39px;
+  padding-bottom: 32px;
   text-align: center;
+  border-bottom: 1px solid $light_grey;
 
   @media (min-width: $tablet-width) {
     justify-self: left;
+    padding-top: 29px;
+    border: none;
   }
 }

@@ -3,9 +3,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .social__item-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   color: $special_grey-3;
 
   &:hover,

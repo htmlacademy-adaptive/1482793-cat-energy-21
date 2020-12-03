@@ -3,21 +3,20 @@
   text-align: center;
   color: $white;
   background-color: $basic_green;
-  background-image: linear-gradient(to top, $white 175px, transparent 175px);
+  background-image: linear-gradient(to top, $white 170px, transparent 170px);
   background-repeat: no-repeat;
   background-position: center bottom;
 
   @media (min-width: $tablet-width) {
-    min-height: 810px;
+    min-height: 861px;
+    padding-top: 24px;
     color: $black;
     background: none;
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $basic_green;
-    background-image: linear-gradient(to right, $white 720px, transparent 720px);
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    min-height: 657px;
+    padding-top: 78px;
   }
 }
 
@@ -29,7 +28,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 223px;
     padding-left: 80px;
   }
 }
@@ -37,6 +35,7 @@
 .promo__description {
   position: relative;
   padding-top: 27px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 49px;
@@ -44,6 +43,7 @@
 
   @media (min-width: $desktop-width) {
     z-index: 1;
+    margin-bottom: 52px;
   }
 }
 
@@ -54,6 +54,8 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
     color: $black;
   }
 }
@@ -62,23 +64,38 @@
   margin: 0;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__link-button {
   width: 100%;
+  padding-bottom: 12px;
   font-size: 14px;
   line-height: 18px;
 
   @media (min-width: $tablet-width) {
     width: 244px;
+    margin-left: -5px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
 .promo__image {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 160px;
-    left: 50%;
+    top: 230px;
+    right: -50%;
     width: 709px;
     height: 609px;
     z-index: -1;
@@ -86,8 +103,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    bottom: -200px;
-    left: 650px;
+    top: -55px;
+    right: -50px;
     width: 552px;
     height: 499px;
     z-index: 0;
