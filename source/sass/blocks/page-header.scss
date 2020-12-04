@@ -6,20 +6,34 @@
   }
 }
 
-.page-header--main {
+.page-header--index {
+  position: relative;
+
   @media (min-width: $desktop-width) {
-    background-color: transparent;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 50%;
+      height: 694px;
+      background-color: $basic_green;
+      background-image: url("https://via.placeholder.com/720x694");
+      background-size: 720px auto;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
   }
 }
 
 .page-header__wrapper {
   position: relative;
-  padding-top: 11px;
+  padding-top: 24px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding-top: 24px;
     border: none;
   }
 
