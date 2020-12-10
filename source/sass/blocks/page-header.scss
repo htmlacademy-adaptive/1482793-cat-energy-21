@@ -1,5 +1,6 @@
 .page-header {
   border-bottom: 1px solid $silver_grey;
+  overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
     border: none;

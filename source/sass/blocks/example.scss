@@ -43,15 +43,12 @@
 .example__title {
   margin: 0;
   margin-bottom: 33px;
-  font-size: 36px;
   font-weight: inherit;
   line-height: 40px;
   color: $black;
 
   @media (min-width: $tablet-width) {
     grid-area: example-title;
-    font-size: 60px;
-    line-height: 60px;
   }
 
   @media (min-width: $desktop-width) {

@@ -11,13 +11,13 @@
 }
 
 .main-nav__item {
+  position: relative;
   padding-top: 22px;
   padding-bottom: 23px;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  border-top: 1px solid $silver_grey;
 
   @media (min-width: $tablet-width) {
     margin-right: 35px;
@@ -25,7 +25,6 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    border: none;
 
     &:last-child {
       margin-right: 0;
@@ -34,6 +33,28 @@
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .main-nav__item::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $silver_grey;
+  }
+
+  .main-nav__item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: $silver_grey;
   }
 }
 
@@ -50,7 +71,7 @@
   }
 
   &--active {
-    padding-bottom: 7px;
+    padding-bottom: 6px;
     pointer-events: none;
     border-bottom: 2px solid $basic_green;
   }
