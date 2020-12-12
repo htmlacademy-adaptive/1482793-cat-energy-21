@@ -1,19 +1,44 @@
 .show-more {
+  position: relative;
+  padding-top: 80px;
+
+  @media (max-width: $mobile-max-width) {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $silver_grey;
+    }
+
+    &::before {
+      right: 50%;
+    }
+
+    &::after {
+      left: 50%;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 161px 36px 40px;
+    margin-top: 83px;
+    padding: 159px 36px 10px;
     text-align: center;
+    border: 2px solid $basic_grey;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 243px 30px 40px 35px;
+    padding: 160px 0 38px 0;
   }
 }
 
 .show-more__title {
+  position: relative;
   margin: 0;
   margin-bottom: 8px;
   font-weight: inherit;
@@ -22,6 +47,35 @@
   text-transform: uppercase;
   color: $black_grey;
   text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background-color: $grey;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 150px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before,
+    &::after {
+      width: 60px;
+      top: -79px;
+    }
+  }
 }
 
 .show-more__description {
@@ -31,10 +85,23 @@
   line-height: 16px;
   font-family: $arial;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+    margin: 0 auto;
+    padding-bottom: 62px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 65px;
+  }
 }
 
 .show-more__link {
   width: 100%;
+  margin-bottom: 25px;
   color: $special_dark-grey;
   background-color: $basic_grey;
 
@@ -45,5 +112,10 @@
 
   &:active {
     color: $transparent-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    margin: 0 auto;
   }
 }

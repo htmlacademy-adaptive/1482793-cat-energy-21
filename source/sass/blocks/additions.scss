@@ -1,48 +1,107 @@
 .additions {
+  padding-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 9px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 11px;
   }
 }
 
 .additions__title {
+  position: relative;
+  width: max-content;
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 35px;
+  margin-left: -19px;
+  padding-right: 22px;
+  padding-left: 19px;
   font-size: 24px;
   font-weight: inherit;
   line-height: 24px;
   color: $black;
+  background-color: $white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    width: 100vw;
+    height: 2px;
+    background-color: $basic_green;
+    z-index: -1;
+  }
+
+  &::after {
+    left: 50%;
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    margin-left: 0;
+    padding-right: 36px;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before,
+    &::after {
+      bottom: 11px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
+    margin-left: -39px;
+    padding-right: 35px;
+    padding-left: 40px;
   }
 }
 
 .additions__list {
   @include list-reset;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 69px;
+    margin-bottom: 68px;
   }
 }
 
 .additions__item {
+  padding-top: 12px;
+  padding-bottom: 18px;
   border-bottom: 1px solid $special_grey;
 
   &:first-child {
     border-top: 1px solid $special_grey;
   }
 
+  &:not(:first-child) {
+    margin-top: -1px;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 26px 38px 28px;
+    padding: 27px 38px 27px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 894px;
-    padding: 15px 0 17px;
+    min-height: 73px;
+    padding: 0;
   }
 }
 
@@ -53,13 +112,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 630px;
+    align-items: center;
+    width: 635px;
   }
 }
 
 .additions__name {
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   font-size: 16px;
   font-weight: inherit;
   line-height: 16px;
@@ -67,6 +127,13 @@
 
   @media (min-width: $tablet-width) {
     margin-right: auto;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 286px;
+    margin: 0;
   }
 }
 
@@ -77,50 +144,72 @@
 .additions__table {
   width: 100%;
   margin-bottom: 15px;
+  margin-left: -2px;
   font-size: 14px;
   line-height: 14px;
   font-family: $arial;
+  border-spacing: 0;
+  border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
     width: 226px;
     margin: 0;
+    margin-bottom: 23px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 320px;
+    width: 309px;
+    margin-top: 27px;
   }
 }
 
 .additions__price-tag {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .additions__price {
   text-align: right;
+  margin-right: -2px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 94px;
+  }
 
   @media (min-width: $desktop-width) {
+    min-width: 67px;
+    margin: 0;
     text-align: left;
-    width: 75px;
   }
 }
 
 .additions__button {
   width: 100%;
-  margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 245px;
+    width: 244px;
   }
 }
 
 .additions__promo {
+  min-height: 289px;
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 35px;
+  padding: 186px 61px 20px 58px;
   font-size: 16px;
   line-height: 20px;
   font-family: $arial;
@@ -128,8 +217,17 @@
   text-align: center;
   background-color: $basic_green;
 
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    margin-bottom: 75px;
+    padding: 71px 120px 69px 423px;
+    text-align: left;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 245px;
-    margin-bottom: 86px;
+    width: 244px;
+    min-height: 289px;
+    padding: 187px 42px 0 40px;
+    text-align: center;
   }
 }
