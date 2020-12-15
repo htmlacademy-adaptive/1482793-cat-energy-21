@@ -22,9 +22,6 @@
 .copyright__image {
   width: 27px;
   height: 34px;
-}
-
-.copyright__image path {
   fill: $special_grey-3;
 }
 
@@ -35,13 +32,13 @@
 
   &:hover,
   &:focus {
-    .copyright__image path {
+    .copyright__image {
       fill: $basic_green;
     }
   }
 
   &:active {
-    .copyright__image path {
+    .copyright__image {
       fill: $basic_green;
     }
     opacity: 0.3;

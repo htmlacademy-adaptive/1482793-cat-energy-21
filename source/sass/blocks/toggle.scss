@@ -1,17 +1,67 @@
+.toggle {
+  padding-top: 28px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-top: 29px;
+    padding-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.toggle__image {
+  margin-left: -20px;
+  margin-right: -11px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -40px;
+  }
+}
+
+.toggle__photo {
+  display: block;
+  width: 311px;
+  height: 232px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 620px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 690px;
+    height: 658px;
+  }
+}
+
 .toggle__controls {
   display: flex;
   justify-content: space-between;
-  padding: 23px 25px 25px 27px;
+  padding: 21px 25px 26px 27px;
 
   @media (min-width: $tablet-width) {
-    padding: 23px 60px 64px 56px;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    padding: 0 60px 64px 56px;
   }
 
   @media (min-width: $desktop-width) {
     width: 648px;
-    margin-right: -10px;
-    padding-top: 25px;
+    right: -10px;
+    bottom: 3px;
     padding-right: 0;
+    padding-bottom: 60px;
   }
 }
 

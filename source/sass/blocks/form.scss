@@ -73,6 +73,7 @@
 
     @media (min-width: $tablet-width) {
       padding-top: 34px;
+      padding-bottom: 0;
       border: 1px solid $silver_grey;
     }
 
@@ -114,7 +115,7 @@
 
     @media (min-width: $tablet-width) {
       padding-top: 0;
-      padding-bottom: 13px;
+      padding-bottom: 14px;
     }
 
     @media (min-width: $desktop-width) {
@@ -160,6 +161,7 @@
 }
 
 .form__item {
+  position: relative;
   margin: 0;
   padding: 0;
 }
@@ -479,6 +481,54 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 69px;
   }
+}
+
+.form__icon {
+  position: absolute;
+
+  &--email {
+    top: 17px;
+    right: 16px;
+
+    @media (min-width: $tablet-width) {
+      top: 18px;
+      right: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 19px;
+    }
+  }
+
+  &--tel {
+    top: 15px;
+    right: 14px;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      right: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 15px;
+    }
+  }
+}
+
+.form__input:focus ~ .form__icon--tel {
+  fill: $basic_green;
+}
+
+.form__input--invalid ~ .form__icon--tel {
+  fill: $status_error;
+}
+
+.form__input:focus ~ .form__icon--email {
+  stroke: $basic_green;
+}
+
+.form__input--invalid ~ .form__icon--email {
+  stroke: $status_error;
 }
 
 .form__button-wrap {

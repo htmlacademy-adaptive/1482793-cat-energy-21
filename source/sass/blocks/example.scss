@@ -3,13 +3,13 @@
   background-color: $lighter_grey;
 
   @media (min-width: $tablet-width) {
-    padding-top: 43px;
+    padding-top: 53px;
     border-top: 1px solid $silver_grey;
     background: linear-gradient(to top, $lighter_grey 462px, $white 462px);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 23px;
+    padding-top: 0;
     border: none;
     background: linear-gradient(to top, $lighter_grey 461px, $white 461px);
   }
@@ -24,7 +24,7 @@
       "example-list example-price"
       "example-toggle example-toggle";
     grid-template-columns: min-content 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, max-content);
   }
 
   @media (min-width: $desktop-width) {
@@ -49,10 +49,13 @@
 
   @media (min-width: $tablet-width) {
     grid-area: example-title;
+    margin-bottom: 43px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 72px;
+    margin: 0;
+    padding-top: 71px;
+    padding-bottom: 76px;
   }
 }
 
@@ -75,7 +78,7 @@
     align-self: start;
     width: 436px;
     margin: 0;
-    padding-top: 16px;
+    padding-top: 24px;
   }
 }
 
@@ -109,11 +112,13 @@
 
   @media (min-width: $tablet-width) {
     width: 162px;
+    margin-bottom: 23px;
     padding-bottom: 18px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    padding-bottom: 18px;
   }
 }
 
