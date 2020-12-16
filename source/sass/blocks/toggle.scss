@@ -17,6 +17,14 @@
   margin-left: -20px;
   margin-right: -11px;
 
+  &--before {
+    display: block;
+  }
+
+  &--after {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
   }

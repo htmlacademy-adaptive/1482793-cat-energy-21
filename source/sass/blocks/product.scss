@@ -36,11 +36,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 37px 40px 39px;
+    padding: 2px 37px 40px 39px;
   }
 }
 
 .product__image {
+  width: 140px;
+  height: 112px;
+
   @media (min-width: $tablet-width) {
     display: block;
     width: 168px;
@@ -50,7 +53,7 @@
 
   @media (min-width: $desktop-width) {
     width: 172px;
-    height: 196px;
+    height: 200px;
   }
 }
 
@@ -73,7 +76,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 20px;
-    padding-top: 48px;
+    padding-top: 42px;
     line-height: 21px;
   }
 }
