@@ -1,17 +1,18 @@
 .advantages__title {
   margin: 0;
   margin-bottom: 40px;
-  padding-top: 7px;
+  padding-top: 8px;
   font-weight: inherit;
   line-height: 40px;
   color: $black;
 
   @media (min-width: $tablet-width) {
-    padding-top: 15px;
+    padding-top: 25px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 42px;
+    padding-top: 51px;
   }
 }
 
@@ -32,6 +33,7 @@
     display: grid;
     grid-template-columns: repeat(4, 247px);
     justify-content: space-between;
+    margin-bottom: 11px;
   }
 }
 
@@ -46,10 +48,15 @@
     counter-increment: advantagesCounter;
   }
 
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-bottom: 13px;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 60px;
     height: 60px;
@@ -61,6 +68,64 @@
       height: 80px;
     }
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+  }
+
+  &--composition::after {
+    top: 12px;
+    left: 14px;
+    width: 30px;
+    height: 32px;
+    background-image: url("../img/icon_leaf.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 57px;
+      left: 24px;
+    }
+  }
+
+  &--form::after {
+    top: 11px;
+    left: 14px;
+    width: 29px;
+    height: 31px;
+    background-image: url("../img/icon_tub.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 56px;
+      left: 25px;
+    }
+  }
+
+  &--diet::after {
+    top: 12px;
+    left: 18px;
+    width: 25px;
+    height: 30px;
+    background-image: url("../img/icon_eat.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 57px;
+      left: 28px;
+    }
+  }
+
+  &--speed::after {
+    top: 11px;
+    left: 14px;
+    width: 32px;
+    height: 33px;
+    background-image: url("../img/icon_alarm.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 55px;
+      left: 24px;
+    }
+  }
 }
 
 .advantages__item-text {
@@ -70,6 +135,11 @@
     padding-bottom: 48px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-bottom: 40px;
   }
 
   &::before {

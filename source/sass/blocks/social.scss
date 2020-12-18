@@ -2,9 +2,16 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  justify-content: space-between;
+  padding: 20px 77px 21px 73px;
+
+  @media (min-width: $tablet-width) {
+    width: 139px;
+    margin: 0 auto;
+    padding: 0;
+    padding-right: 10px;
+    padding-top: 20px;
+  }
 }
 
 .social__item-link {
@@ -12,17 +19,67 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
   color: $special_grey-3;
+}
 
-  &:hover,
-  &:focus {
-    color: $basic_green;
+.social__item-icon {
+  &--vkontakte {
+    width: 23px;
+    height: 16px;
+    margin-top: 2px;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 22px;
+      margin: 0;
+      margin-top: 6px;
+    }
   }
 
-  &:active {
-    color: $basic_green;
-    opacity: 0.3;
+  &--instagram {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    margin-left: 3px;
+
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+      margin-top: 8px;
+    }
   }
+
+  &--facebook {
+    width: 22px;
+    height: 22px;
+    padding-left: 3px;
+    stroke: $special_grey-3;
+
+    @media (min-width: $tablet-width) {
+      width: 28px;
+      height: 33px;
+      padding: 0;
+    }
+  }
+}
+
+.social__item-link:hover .social__item-icon,
+.social__item-link:focus .social__item-icon {
+  fill: $basic_green;
+}
+
+.social__item-link:hover .social__item-icon--facebook,
+.social__item-link:focus .social__item-icon--facebook {
+  fill: none;
+  stroke: $basic_green;
+}
+
+.social__item-link:active .social__item-icon {
+  fill: $basic_green;
+  opacity: 0.3;
+}
+
+.social__item-link:active .social__item-icon--facebook {
+  fill: none;
+  stroke: $basic_green;
 }
