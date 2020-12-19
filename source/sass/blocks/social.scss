@@ -27,6 +27,7 @@
     width: 23px;
     height: 16px;
     margin-top: 2px;
+    fill: $special_grey-3;
 
     @media (min-width: $tablet-width) {
       width: 30px;
@@ -41,6 +42,7 @@
     height: 16px;
     margin-top: 3px;
     margin-left: 3px;
+    fill: $special_grey-3;
 
     @media (min-width: $tablet-width) {
       width: 23px;
@@ -59,6 +61,8 @@
       width: 28px;
       height: 33px;
       padding: 0;
+      fill: none;
+      stroke: $special_grey-3;
     }
   }
 }
