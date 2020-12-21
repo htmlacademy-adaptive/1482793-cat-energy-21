@@ -297,7 +297,7 @@
     outline-offset: -2px;
   }
 
-  &:invalid:not(:placeholder-shown) {
+  &:required:invalid:focus {
     outline: 2px solid $status_error;
     outline-offset: -2px;
   }
@@ -522,7 +522,7 @@
   fill: $basic_green;
 }
 
-.form__input:invalid:not(:placeholder-shown) ~ .form__icon--tel {
+.form__input:required:invalid:focus ~ .form__icon--tel {
   fill: $status_error;
 }
 
@@ -530,7 +530,7 @@
   stroke: $basic_green;
 }
 
-.form__input:invalid:not(:placeholder-shown) ~ .form__icon--email {
+.form__input:required:invalid:focus ~ .form__icon--email {
   stroke: $status_error;
 }
 
