@@ -297,7 +297,7 @@
     outline-offset: -2px;
   }
 
-  &--invalid {
+  &:invalid:not(:placeholder-shown) {
     outline: 2px solid $status_error;
     outline-offset: -2px;
   }
@@ -489,6 +489,8 @@
   &--email {
     top: 17px;
     right: 16px;
+    fill: none;
+    stroke: $special_dark-grey-2;
 
     @media (min-width: $tablet-width) {
       top: 18px;
@@ -503,6 +505,7 @@
   &--tel {
     top: 15px;
     right: 14px;
+    fill: $special_dark-grey-2;
 
     @media (min-width: $tablet-width) {
       top: 16px;
@@ -519,7 +522,7 @@
   fill: $basic_green;
 }
 
-.form__input--invalid ~ .form__icon--tel {
+.form__input:invalid:not(:placeholder-shown) ~ .form__icon--tel {
   fill: $status_error;
 }
 
@@ -527,7 +530,7 @@
   stroke: $basic_green;
 }
 
-.form__input--invalid ~ .form__icon--email {
+.form__input:invalid:not(:placeholder-shown) ~ .form__icon--email {
   stroke: $status_error;
 }
 

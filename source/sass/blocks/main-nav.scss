@@ -6,7 +6,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 600px;
   }
 }
 
@@ -20,7 +24,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-right: 35px;
+    margin-left: 35px;
     padding-top: 18px;
     padding-bottom: 23px;
     font-weight: 400;
@@ -147,6 +151,10 @@
   }
 
   .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--opened .main-nav__list {
     display: block;
   }
 }
