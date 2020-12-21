@@ -9,6 +9,9 @@
     <link href="/css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
       <div class="page-header__wrapper container">
@@ -85,14 +88,14 @@
                 <label class="form__label" for="form-email">E-mail:*</label>
                 <input class="form__input" id="form-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                 <svg class="form__icon form__icon--email" width="19" height="14">
-                  <use xlink:href="/img/sprite.svg#icon_email"></use>
+                  <use xlink:href="#icon_email"></use>
                 </svg>
               </p>
               <p class="form__item">
                 <label class="form__label" for="form-tel">Телефон:*</label>
                 <input class="form__input" id="form-tel" type="tel" name="tel" pattern="[0-9]{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="8 (960) 900-60-90" required>
                 <svg class="form__icon form__icon--tel" width="20" height="20">
-                  <use xlink:href="/img/sprite.svg#icon-phone"></use>
+                  <use xlink:href="#icon-phone"></use>
                 </svg>
               </p>
           </div>
@@ -161,7 +164,7 @@
               <a class="social__item-link social__item-link--instagram" href="https://www.instagram.com/htmlacademy">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg class="social__item-icon social__item-icon--instagram" width="23" height="23">
-                  <use xlink:href="/img/sprite.svg#instagram"></use>
+                  <use xlink:href="#instagram"></use>
                 </svg>
               </a>
             </li>
@@ -169,7 +172,7 @@
               <a class="social__item-link social__item-link--facebook" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg class="social__item-icon social__item-icon--facebook" width="28" height="33">
-                  <use xlink:href="/img/sprite.svg#facebook"></use>
+                  <use xlink:href="#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -179,7 +182,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
             <svg class="copyright__image" width="27" height="34">
-              <use xlink:href="/img/sprite.svg#htmlacademy"></use>
+              <use xlink:href="#htmlacademy"></use>
             </svg>
           </a>
         </div>
