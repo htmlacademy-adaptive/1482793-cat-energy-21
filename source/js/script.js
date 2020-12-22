@@ -1,5 +1,6 @@
 const mainNav = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
+const showMore = document.querySelector('.show-more__link');
 
 mainNav.classList.remove('main-nav--nojs');
 
@@ -11,4 +12,8 @@ navToggle.addEventListener('click', function() {
     mainNav.classList.add('main-nav--closed');
     mainNav.classList.remove('main-nav--opened');
   }
+});
+
+showMore.addEventListener("click", function (evt) {
+  evt.preventDefault();
 });
