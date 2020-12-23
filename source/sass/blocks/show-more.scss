@@ -1,6 +1,7 @@
 .show-more {
   position: relative;
   padding-top: 80px;
+  order: 10;
 
   @media (max-width: $mobile-max-width) {
     &::before,
